@@ -10,6 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
         clean: true,
+        assetModuleFilename: '[name][ext]'
     },
     module: {
         rules: [
@@ -20,13 +21,13 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-              },
+            },
         ],
     },
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Dream Food',
+            title: 'Annette',
             filename: 'index.html',
             template: './src/index.html',
         })
