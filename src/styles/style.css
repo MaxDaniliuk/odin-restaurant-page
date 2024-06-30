@@ -9,15 +9,17 @@
 :root, body {
     margin: 0;
     height: 100%;
-
 }
 
-html {
+/* Background */ 
+
+:root {
     /* Image by Glenov Brankovic -- Unsplash.com */
     background: url('./images/bg-image-main.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #000000;
 }
 
 
@@ -27,8 +29,7 @@ body {
     flex-direction: column;
 }
 
-
-
+/* Header  */
 
 #nav { 
     display: flex;
@@ -36,6 +37,16 @@ body {
     gap: 1rem;
     margin-top: 12.87px;
 }
+
+.name {
+    color: #ffc100;
+    font-size: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: "Sacramento", cursive;
+}
+
+/* general button styles */
 
 .btn {
     align-self: center;
@@ -52,13 +63,7 @@ body {
     }
 }
 
-.name {
-    color: #ffc100;
-    font-size: 5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-family: "Sacramento", cursive;
-}
+/* Main-Content */
 
 #content {
     display: flex;
@@ -90,6 +95,8 @@ body {
     margin-top: auto;
     margin-bottom: 15vh;
 }
+
+/* content-specific button styles */
 
 .content-btn {
     font-size: 1.5rem;
