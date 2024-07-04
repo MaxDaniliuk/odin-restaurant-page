@@ -29,6 +29,12 @@ body {
     flex-direction: column;
 }
 
+#content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 /* Header  */
 
 #nav { 
@@ -63,9 +69,9 @@ body {
     }
 }
 
-/* Main-Content */
+/* Homepage */
 
-#content {
+.homepage, .contacts-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,7 +94,7 @@ body {
     font-size: 1.5rem;
 }
 
-.content-btns {
+.home-btns-container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -96,9 +102,9 @@ body {
     margin-bottom: 15vh;
 }
 
-/* content-specific button styles */
+/* homepage-specific button styles */
 
-.content-btn {
+.home-btn {
     font-size: 1.5rem;
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -108,4 +114,25 @@ body {
         background-color: #ffffff;
         color: #000000;
     }
+}
+
+/* Contacts page */
+
+.contacts-page {
+    justify-content: start;
+}
+
+.contacts-page-container {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-top: 3rem;
+}
+
+.contacts-page-container p {
+    margin: 0;
+}
+
+.contact-svg {
+    width: 3rem;
+    fill: #ffffff;
 }
