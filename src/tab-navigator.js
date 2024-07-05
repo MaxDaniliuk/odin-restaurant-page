@@ -1,5 +1,6 @@
 import loadHomePage from './loadHomePage';
 import loadContactsPage from './loadContactsPage';
+import loadAboutUsPage from './loadAboutUsPage';
 
 export class TabNavigator {
 
@@ -10,12 +11,17 @@ export class TabNavigator {
     }
 
     cacheDom() {
-        this.home = document.querySelector('.home');
-        this.contacts = document.querySelectorAll('.contacts');
+        this.homeBtn = document.querySelector('.home');
+        this.contactsBtn = document.querySelectorAll('.contacts');
+        this.aboutUsBtn = document.querySelector('.about-us');
     }
 
     clearContent() {
-        this.containers = [document.querySelector('.homepage'), document.querySelector('.contacts-page')];
+        this.containers = [
+            document.querySelector('.homepage'), 
+            document.querySelector('.contacts-page'), 
+            document.querySelector('.about-us-page')
+        ];
         for (let i = 0; i < this.containers.length; i++) {
             if (this.containers[i] !== null && this.containers[i].length !== 0) {
                 this.containers[i].remove();
@@ -24,13 +30,16 @@ export class TabNavigator {
     }
 
     bindEvents() {
-        this.home.addEventListener('click', (e) => {
+        this.homeBtn.addEventListener('click', (e) => {
             if (!document.querySelector('.homepage')) this.recogniseButton(e);
         })
-        this.contacts.forEach(button => {
+        this.contactsBtn.forEach(button => {
             button.addEventListener('click', (e) => {
                 if (!document.querySelector('.contacts-page')) this.recogniseButton(e);
             })
+        })
+        this.aboutUsBtn.addEventListener('click', (e) => {
+            if (!document.querySelector('.about-us-page')) this.recogniseButton(e);
         })
     }
 
@@ -49,6 +58,8 @@ export class TabNavigator {
             this.rebindEvents();
         } else if (e.target.classList.contains('contacts')) {
             loadContactsPage();
+        } else if (e.target.classList.contains('about-us')) {
+            loadAboutUsPage();
         }
     }
 
