@@ -1,6 +1,7 @@
 import loadHomePage from './loadHomePage';
 import loadContactsPage from './loadContactsPage';
 import loadAboutUsPage from './loadAboutUsPage';
+import loadMenuPage from './loadMenuPage';
 
 export class TabNavigator {
 
@@ -14,13 +15,15 @@ export class TabNavigator {
         this.homeBtn = document.querySelector('.home');
         this.contactsBtn = document.querySelectorAll('.contacts');
         this.aboutUsBtn = document.querySelector('.about-us');
+        this.menuBtn = document.querySelector('.menus');
     }
 
     clearContent() {
         this.containers = [
             document.querySelector('.homepage'), 
             document.querySelector('.contacts-page'), 
-            document.querySelector('.about-us-page')
+            document.querySelector('.about-us-page'),
+            document.querySelector('.menu-page')
         ];
         for (let i = 0; i < this.containers.length; i++) {
             if (this.containers[i] !== null && this.containers[i].length !== 0) {
@@ -41,6 +44,9 @@ export class TabNavigator {
         this.aboutUsBtn.addEventListener('click', (e) => {
             if (!document.querySelector('.about-us-page')) this.recogniseButton(e);
         })
+        this.menuBtn.addEventListener('click', (e) => {
+            if (!document.querySelector('.menu-page')) this.recogniseButton(e);
+        })
     }
 
     rebindEvents() {
@@ -60,6 +66,8 @@ export class TabNavigator {
             loadContactsPage();
         } else if (e.target.classList.contains('about-us')) {
             loadAboutUsPage();
+        } else if (e.target.classList.contains('menus')) {
+            loadMenuPage();
         }
     }
 
