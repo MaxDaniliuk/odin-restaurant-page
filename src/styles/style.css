@@ -71,7 +71,7 @@ body {
 
 /* Homepage */
 
-.homepage, .contacts-page {
+.homepage, .contacts-page, .about-us-page, .menu-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,9 +140,7 @@ body {
 /* About us page */
 
 .about-us-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 0;
     margin-top: 2rem;
 
     color: #ffffff;
@@ -151,4 +149,31 @@ body {
 
 .about-us-page p {
     text-shadow: 0 2px 16px #ffc100;
+}
+
+/* Menu page */
+
+.menu-page {
+    gap: 15px;
+}
+
+.dish-block {
+    width: 50vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+
+    color: #ffffff;
+}
+
+.dish-block p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    align-self: start;
+    margin: 0;
+}
+
+.dish-img {
+    width: 25vw;
 }
