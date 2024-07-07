@@ -126,16 +126,34 @@ body {
     font-size: 3rem;
     color: #ffffff;
     margin-top: 3rem;
+
 }
 
 .contacts-page-container p {
+    text-align: center;
     margin: 0;
 }
 
+.social-icon-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .contact-svg {
+    display: block;
     width: 3rem;
     fill: #ffffff;
+    transition: all 0.2s linear;
 }
+
+.contact-svg:hover {
+    fill: #352620;
+}
+
 
 /* About us page */
 
