@@ -126,7 +126,6 @@ body {
     font-size: 3rem;
     color: #ffffff;
     margin-top: 3rem;
-
 }
 
 .contacts-page-container p {
@@ -153,7 +152,6 @@ body {
 .contact-svg:hover {
     fill: #352620;
 }
-
 
 /* About us page */
 
@@ -193,5 +191,5 @@ body {
 }
 
 .dish-img {
-    width: 25vw;
+    width: 20vw;
 }
